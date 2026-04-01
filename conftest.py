@@ -2,18 +2,12 @@ import pytest
 from selene import browser
 from selenium.webdriver.remote.client_config import ClientConfig
 
-from utils.attach import attach_video, attach_screenshot,attach_console_log,attach_page_source
+from utils.attach import attach_video, attach_screenshot, attach_console_log, attach_page_source
 from selenium import webdriver
 from config.settings import *
 
 SELENOID_URL='https://selenoid.autotests.cloud/wd/hub'
 VIDEO_BASE_URL='https://selenoid.autotests.cloud/video'
-
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    outcome = yield
-    report=outcome.get_result()
-    setattr(item,f'rep_{report.when}',report)
 
 @pytest.fixture(autouse=True)
 def browser_function(request):
