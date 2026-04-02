@@ -70,10 +70,7 @@ PASSWORD=your_selenoid_password
 
 ### Видео прогона теста
 
-<video src="images/video/test_search_company.mp4" controls width="100%"></video>
-
-Если в вашей среде превью не отображается, файл доступен по ссылке:
-[test_search_company.mp4](images/video/test_search_company.mp4)
+![Видео прогона test_search_company](images/screenshots/test_search_company.gif)
 
 ### Примечание
 Иконки сохранены локально в `images/logo_stacks/` (часть из Devicon, часть из официальных ресурсов GitHub, Allure, Qameta и Selenoid).
