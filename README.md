@@ -71,7 +71,3 @@ PASSWORD=your_selenoid_password
 ### Видео прогона теста
 
 ![Видео прогона test_search_company](images/screenshots/test_search_company.gif)
-
-### Примечание
-Иконки сохранены локально в `images/logo_stacks/` (часть из Devicon, часть из официальных ресурсов GitHub, Allure, Qameta и Selenoid).
-Скриншоты и видео тоже лежат в репозитории (в `images/`), поэтому README не зависит от внешних CDN.
