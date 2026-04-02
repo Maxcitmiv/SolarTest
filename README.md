@@ -7,14 +7,13 @@
   <code><img width="5%" title="Pytest" src="images/logo_stacks/pytest.svg"></code>
   <code><img width="5%" title="Selene" src="images/logo_stacks/selene.svg"></code>
   <code><img width="5%" title="Selenium" src="images/logo_stacks/selenium.svg"></code>
-  <code><img width="5%" title="GitHub" src="images/logo_stacks/github.svg"></code>
+  <code><img width="5%" title="GitHub" src="images/logo_stacks/github.png"></code>
   <code><img width="5%" title="Jenkins" src="images/logo_stacks/jenkins.svg"></code>
-  <code><img width="5%" title="Docker" src="images/logo_stacks/docker.svg"></code>
-  <code><img width="5%" title="Selenoid" src="images/logo_stacks/selenoid.svg"></code>
+  <code><img width="5%" title="Selenoid" src="images/logo_stacks/selenoid.png"></code>
   <code><img width="5%" title="Allure Report" src="images/logo_stacks/allure.svg"></code>
-  <code><img width="5%" title="Allure TestOps" src="images/logo_stacks/allure_testops.svg"></code>
+  <code><img width="5%" title="Allure TestOps" src="images/logo_stacks/allure_testops.png"></code>
   <code><img width="5%" title="Jira" src="images/logo_stacks/jira.svg"></code>
-  <code><img width="5%" title="Telegram" src="images/logo_stacks/telegram.svg"></code>
+  <code><img width="5%" title="Telegram" src="images/logo_stacks/telegram.png"></code>
 </p>
 
 ### Что проверяем
@@ -50,8 +49,9 @@ PASSWORD=your_selenoid_password
 ### [Allure report build #19](https://jenkins.autotests.cloud/job/autotes11/19/allure/)
 
 ##### В отчете доступны шаги теста, вложения (screenshot, page source, console log) и ссылка на видео прогона.
+![Allure Report](images/screenshots/allure_report.png)
 
-### <img width="3%" title="Allure TestOps" src="images/logo_stacks/allure_testops.svg"> Интеграция с Allure TestOps
+### <img width="3%" title="Allure TestOps" src="images/logo_stacks/allure_testops.png"> Интеграция с Allure TestOps
 
 ### [Dashboard](https://allure.autotests.cloud/project/5159/dashboards)
 
@@ -63,7 +63,7 @@ PASSWORD=your_selenoid_password
 ##### Через интеграцию можно связывать автотесты и результаты прогонов с задачами в Jira.
 ![Jira Task](images/screenshots/jira_issue.png)
 
-### <img width="3%" title="Telegram" src="images/logo_stacks/telegram.svg"> Интеграция с Telegram
+### <img width="3%" title="Telegram" src="images/logo_stacks/telegram.png"> Интеграция с Telegram
 
 ##### После завершения прогона бот отправляет краткий отчет с итогами и ссылкой на Allure.
 ![Telegram Notification](images/screenshots/telegram_notification.png)
@@ -76,4 +76,5 @@ PASSWORD=your_selenoid_password
 [test_search_company.mp4](images/video/test_search_company.mp4)
 
 ### Примечание
-Все иконки и скриншоты сохранены в репозитории (локально в `images/`), поэтому README не зависит от внешних CDN для отображения графики.
+Иконки сохранены локально в `images/logo_stacks/` (часть из Devicon, часть из официальных ресурсов GitHub, Allure, Qameta и Selenoid).
+Скриншоты и видео тоже лежат в репозитории (в `images/`), поэтому README не зависит от внешних CDN.
