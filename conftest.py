@@ -6,8 +6,7 @@ from utils.attach import attach_video, attach_screenshot, attach_console_log, at
 from selenium import webdriver
 from config.settings import *
 
-SELENOID_URL='https://selenoid.autotests.cloud/wd/hub'
-VIDEO_BASE_URL='https://selenoid.autotests.cloud/video'
+config_pydantic=Config()
 
 @pytest.fixture(autouse=True)
 def browser_function(request):
@@ -25,18 +24,18 @@ def browser_function(request):
     })
 
     driver = webdriver.Remote(
-        command_executor=SELENOID_URL,
+        command_executor=str(config_pydantic.SELENOID_URL),
         options=options,
         client_config=ClientConfig(
-            remote_server_addr=SELENOID_URL,
+            remote_server_addr=str(config_pydantic.SELENOID_URL),
             username=LOGIN,
             password=PASSWORD,
         ),
     )
     browser.config.driver=driver
-    browser.config.base_url = 'https://rt-solar.ru'
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
+    browser.config.base_url = str(config_pydantic.base_url)
+    browser.config.window_width = config_pydantic.window_width
+    browser.config.window_height = config_pydantic.window_height
 
     yield
 
@@ -47,5 +46,5 @@ def browser_function(request):
 
     driver.quit()
 
-    video_url=f'{VIDEO_BASE_URL}/{video_name}'
+    video_url=f'{str(config_pydantic.VIDEO_BASE_URL)}/{video_name}'
     attach_video(video_url)

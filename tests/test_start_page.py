@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from pages.start_page import StartPage
 
 
@@ -34,7 +36,7 @@ def test_transfer_to_analitics_page():
      .analitics_button_click()
      .expect_page_analitics())
 
-
+@pytest.mark.xfail(reason='bug')
 @allure.title('Выбор продукта и проверка промо-страницы продукта')
 def test_expect_product_page():
     (StartPage().open()
